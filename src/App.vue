@@ -11,17 +11,18 @@
   </div>
   
   <!-- computed 함수는 () 붙이면 안됨 성능적으로 이점이 있음 한번계산하고 뚝딱 -->
-  <p>{{now2}} {{counter}}</p> 
+  <!-- <p>{{now2}} {{counter}}</p> 
   <button @click="counter++">현시각</button>
 
   <h4>안녕 {{ name }} {{ 나이 }}</h4>
   <button @click="changeAge(10)">나이바꿔</button>
 
   <p>{{ $store.state.more }}</p>
-  <button @click="getData()">더보기 버튼</button>
+  <button @click="getData()">더보기 버튼</button> -->
 
   <Container @text="text = $event" :instagramData="instagramData" :step="step" :fileUrl="fileUrl" :filter="filter"/>
-  <button @click="more">더보기</button>
+  
+  <!-- <button @click="more">더보기</button> -->
 
   <div class="footer">
     <ul class="footer-button-plus">
@@ -49,7 +50,7 @@ export default {
     return {
       text: "",
       fileUrl: "",
-      step: 0,
+      step: 3,
       btnClick: 0,
       instagramData: instagramData,
       filter: "",

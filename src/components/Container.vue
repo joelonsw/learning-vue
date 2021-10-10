@@ -16,7 +16,7 @@
         </FilterBox>
       </div>
     </div>
-    <div v-else>
+    <div v-else-if="step == 2">
       <!-- 글작성페이지 -->
       <div
         :class="filter"
@@ -29,18 +29,23 @@ write!</textarea
         >
       </div>
     </div>
+    <div v-else>
+      <MyPage/>
+    </div>
   </div>
 </template>
 
 <script>
 import Post from "../components/Post.vue";
 import FilterBox from "./FilterBox.vue";
+import MyPage from "./MyPage.vue";
 
 export default {
   name: "Container",
   components: {
     Post,
     FilterBox,
+    MyPage,
   },
   props: {
     instagramData: Array,
